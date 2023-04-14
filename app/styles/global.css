@@ -1,0 +1,111 @@
+.contenedor {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.head {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("/img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .head {
+    min-height: 25vh;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.titulo {
+  font-size: 2.5rem;
+  text-align: center;
+  @apply mb-5 text-amber-400 font-extrabold;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 2rem;
+
+  @apply lg:gap-y-10 lg:gap-x-6;
+}
+
+.guitarra .descripcion,
+.blog .descripcion {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+  font-size: 1.2rem;
+}
+
+.cta {
+  padding: 0.5rem;
+  @apply w-4/6 lg:w-5/6 mx-auto bg-amber-500 text-white font-bold text-center rounded-md hover:bg-amber-400 hover:tracking-wider transition-all;
+}
+
+.error,
+.bag,
+.spinner {
+  display: grid;
+  gap: 2rem;
+  place-content: center;
+  min-height: 49vh;
+}
+@media (min-width: 768px) {
+  .error,
+  .bag,
+  .spinner {
+    min-height: 53vh;
+  }
+}
+@media (min-width: 1024px) {
+  .error,
+  .bag,
+  .spinner {
+    min-height: 64vh;
+  }
+}
+.curso {
+  min-height: 30vh;
+}
+@media (min-width: 1024px) {
+  .curso {
+    min-height: 35vh;
+  }
+}
+
+.footer .carrito {
+  display: none;
+}
+
+.resumen {
+  position: sticky;
+  top: 3rem;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
