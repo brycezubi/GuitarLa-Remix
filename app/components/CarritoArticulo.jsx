@@ -1,6 +1,6 @@
 import { useOutletContext } from "@remix-run/react";
 import { formatearPrecio } from "~/utils/helpers";
-import { MdDelete } from 'react-icons/Md';
+import { MdDelete } from 'react-icons/md';
 
 const CarritoArticulo = ({ producto }) => {
   const { actualizarCantidad , eliminarArticulo} =  useOutletContext()
